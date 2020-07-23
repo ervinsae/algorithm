@@ -199,6 +199,7 @@ public class Main {
 
     /**
      * 快排2,从小到大
+     * https://wiki.jikexueyuan.com/project/easy-learn-algorithm/floyd.html
      */
     public static void quickSort(int[] a, int low, int high) {
 
