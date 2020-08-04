@@ -11,6 +11,10 @@ public class LinkNode {
         linkNodeOperation.addNode(2);
         linkNodeOperation.addNode(3);
 
+        linkNodeOperation.insertNode(4,3);
+
+        //linkNodeOperation.deleteNode(1);
+        System.out.println("size:" + linkNodeOperation.linkLength());
         // 打印反转前的链表
         linkNodeOperation.traverseNode();
         // 调用反转方法
@@ -22,7 +26,7 @@ public class LinkNode {
             System.out.print(head.value + " ");
             head = head.next;
         }
-    }
 
+    }
 
 }
