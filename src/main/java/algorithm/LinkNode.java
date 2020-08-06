@@ -13,6 +13,7 @@ public class LinkNode {
 
         linkNodeOperation.insertNode(4,3);
 
+        System.out.println(linkNodeOperation.getNode(3).value);
         //linkNodeOperation.deleteNode(1);
         System.out.println("size:" + linkNodeOperation.linkLength());
         // 打印反转前的链表
@@ -26,7 +27,6 @@ public class LinkNode {
             System.out.print(head.value + " ");
             head = head.next;
         }
-
     }
 
 }
