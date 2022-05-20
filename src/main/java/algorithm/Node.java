@@ -1,6 +1,7 @@
 
 
 package algorithm;
+//单项链表
 public class Node{
 
     public int value;

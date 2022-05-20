@@ -50,6 +50,7 @@ public class Main {
             //System.out.println(map.size()+"个");
         }
 
+        System.out.println(5 << 1);
     }
 
     /**
