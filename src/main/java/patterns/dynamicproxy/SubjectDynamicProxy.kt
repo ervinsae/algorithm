@@ -11,7 +11,8 @@ class SubjectDynamicProxy(target: Any): InvocationHandler {
     override fun invoke(proxy: Any?, method: Method?, args: Array<out Any>?): Any {
         before()
         var result = method!!.invoke(subject, *(args ?: arrayOfNulls(0)))
-        return after()
+        after()
+        return result
     }
 
     private fun after() {
@@ -21,4 +22,5 @@ class SubjectDynamicProxy(target: Any): InvocationHandler {
     private fun before() {
         println("proxy client do something before")
     }
+
 }
