@@ -1,5 +1,7 @@
 package thread
 
+import java.sql.DriverManager.println
+
 open class ThreadTask : Thread() {
 
     init {

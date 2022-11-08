@@ -2,6 +2,7 @@ package ervin
 
 import kotlinx.coroutines.*
 import java.lang.Exception
+import java.sql.DriverManager.println
 import kotlin.coroutines.coroutineContext
 
 class Test{
@@ -13,8 +14,8 @@ class Test{
         val num: Int = 128;
         val a:Int? = num
         val b:Int? = num
-        println(a == b)
-        print(a === b)
+        //println(a == b)
+        //println(a === b)
 
         val (number,value) = 3 to "a"
 
@@ -32,10 +33,10 @@ class Test{
             if (a == 3){
                 return
             }
-            print(a)
+            println(a.toString())
         }
 
-        print("end")
+        println("end")
     }
 
 
