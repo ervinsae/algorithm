@@ -19,14 +19,14 @@ public class ThreadTest1 {
 */
 
     public static void main(String[] args) {
-        ExecutorService executors = new ThreadPoolExecutor(1,
-                1,
+        ExecutorService executors = new ThreadPoolExecutor(3,
+                6,
                 0L,
                 TimeUnit.MILLISECONDS,
-                new LinkedBlockingQueue<>(2),
-                new ThreadPoolExecutor.DiscardOldestPolicy());
+                new LinkedBlockingQueue<>(10),
+                new ThreadPoolExecutor.DiscardPolicy());
         //ThreadTest01 test01 = new ThreadTest01();
-        for (int i = 0; i < 99; i++) {
+        for (int i = 1; i < 21; i++) {
             int taskId = i;
             Runnable task = () -> {
                 try {
