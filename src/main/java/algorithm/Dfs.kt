@@ -44,6 +44,7 @@ class Dfs {
 
 /**
  * 广度优先算法 Breath First Search
+ * 遍历每一层的节点
  */
 class Bfs {
 
@@ -53,10 +54,11 @@ class Bfs {
         /**
          * 在Java和Kotlin中，LinkedList类既可以作为链表，也可以作为队列使用。这是因为LinkedList类实现了java.util.Queue接口，而队列就是一种特殊的链表数据结构。
         在队列中，元素按照FIFO（先进先出）的原则进行插入和删除操作。LinkedList类提供了offer()方法用于在队列尾部插入元素，提供了poll()方法用于从队列头部删除元素。因此，我们可以使用LinkedList类来模拟队列的行为。
-        例如，在上面的BFS函数中，我们使用queue.offer()方法将节点加入队列尾部，使用queue.poll()方法从队列头部取出节点。由于LinkedList类底层实现是链表结构，因此这些操作的时间复杂度是O(1)，非常高效。因此，我们可以将LinkedList类看作是队列数据结构的一种实现，用于实现BFS算法中的队列。
+        例如，在上面的BFS函数中，我们使用queue.offer()方法将节点加入队列尾部，使用queue.poll()方法从队列头部取出节点。由于LinkedList类底层实现是链表结构，因此这些操作的时间复杂度是O(1)，非常高效。
+        因此，我们可以将LinkedList类看作是队列数据结构的一种实现，用于实现BFS算法中的队列。
          */
         val queue = LinkedList<TreeNode>()
-        queue.offer(root) // 将根节点加入队列
+        queue.offer(root) // 将根节点加入队列，也可以用add
 
         while (queue.isNotEmpty()) {
             val node = queue.poll() // 出队队首节点
@@ -87,9 +89,12 @@ fun main(args: Array<String>) {
                     right = TreeNode(7)))
 
     var dfs = Dfs()
-    dfs.dfsIterative(root)
+    //dfs.dfsIterative(root)
 
-    println("------------")
+    //println("------------")
 
     dfs.dfsRecursive(root)
+
+    var bfs = Bfs()
+    bfs.bfs(root)
 }
