@@ -1,5 +1,6 @@
-package ervin;
+package main.java.ervin;
 
+import ervin.Test;
 import javafx.scene.control.RadioButton;
 
 import java.util.ArrayList;
